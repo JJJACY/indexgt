@@ -352,14 +352,16 @@
         let translateX = -(index*itemWidth);
         $('.teacher-section-person').animate({'left':`${translateX}px`},duration,function(){
            if (index=== 5) {
-            $('.teacher-section-person').css('left',`${PAGE.data.defaultLenght-index}px`)
             PAGE.data.index = 0;
-            translateX = - ( index * itemWidth); 
+            let index = PAGE.data.index;
+            translateX = -( index * itemWidth);
+            $('.teacher-section-person').css('left',`${translateX}px`)           
            }
            if(index === -1){
-            $('.teacher-section-person').css('left',`${-(PAGE.data.defaultLenght-1)*itemWidth}px`)
             PAGE.data.index = 4;
+            let index = PAGE.data.index;
             translateX = - ( index * itemWidth); 
+            $('.teacher-section-person').css('left',`${translateX}px`)            
            }
            PAGE.data.isLock=false;
         })
