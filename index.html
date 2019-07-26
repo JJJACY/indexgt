@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <link rel="stylesheet" type="text/css" href="./css/reset.css">
   <link rel="stylesheet" type="text/less" href="./less/index.less">
-  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
   <header class="page-header">
@@ -46,9 +45,7 @@
       <li class="banner-nav-item" data-nav="section-4"><a class="banner-nav-item-link" href="javascript:;">DragonBoard&nbsp;410c</a></li>
       <li class="banner-nav-item" data-nav="section-5"><a class="banner-nav-item-link" href="javascript:;">关于Qualcomm</a></li>
     </ul>
-
   </div>
-  <div class="banner-block"></div>
   <div class="coper-section heightcon" id="section-1">
     <div class="container">
       <div class="coper-section-image">
@@ -69,7 +66,7 @@
         </div>
       </div>
       <div class="watch-section-video">
-        <img src="./image/video.png">
+        <video id="watch-video" preload="auto" controls="controls" src="http://cv2.jikexueyuan.com/course/3601-3700/3690/video/10374_b_h264_sd_960_540.mp4?e=1564134767&token=kvniiGWb17-XSxTMHiIVkclXvpopl7nuzl4ANRHA:7z033gvCYuthYRhx1NtVmsh8HNw="></video>
       </div>
       <div class="watch-section-content-title">DragonBoard™ 410c开发公开课</div>
       <div class="watch-section-content-sub-title">
@@ -85,7 +82,7 @@
               <img src="./image/download.png">
             </div>  
           </div>
-          <div class="watch-section-content-text">1.1&nbsp;Dragonboard 课程体系结构及内容  
+          <div class="watch-section-content-text" data-src="http://cv2.jikexueyuan.com/course/3601-3700/3690/video/10374_b_h264_sd_960_540.mp4?e=1564134767&token=kvniiGWb17-XSxTMHiIVkclXvpopl7nuzl4ANRHA:7z033gvCYuthYRhx1NtVmsh8HNw=">1.1&nbsp;Dragonboard 课程体系结构及内容  
             <span class="watch-section-content-time">15:07</span>
           </div>
           
@@ -96,7 +93,7 @@
             </div>
           </div>
           <div>
-            <div class="watch-section-content-text">1.1&nbsp;Dragonboard 课程体系结构及内容  
+            <div class="watch-section-content-text"  data-src="http://cv2.jikexueyuan.com/course/3601-3700/3690/video/10375_b_h264_sd_960_540.mp4?e=1564134767&token=kvniiGWb17-XSxTMHiIVkclXvpopl7nuzl4ANRHA:gtUHKLbIjKdFuRvt7ZCNK-RcXpE=">1.1&nbsp;Dragonboard 课程体系结构及内容  
               <span class="watch-section-content-time">03:17</span>
             </div>
             <div class="watch-section-content-text">2.2&nbsp;获取 DragonBoard 410c 开发板  
@@ -106,7 +103,6 @@
               <span class="watch-section-content-time">03:17</span>
             </div>
           </div>
-          
          <!-- 111 <div class="watch-section-content-text">1.1&nbsp;Dragonboard 课程体系结构及内容  
             <span class="watch-section-content-time">03:17</span>
           </div>
@@ -288,7 +284,9 @@
     </ul>
     </div>
   </div>
-  <script type="text/javascript">
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./js/index.js" ></script>
+  <!-- <script type="text/javascript">
     const PAGE ={
       data: {
         index: 0,
@@ -300,6 +298,7 @@
         offsetitemHeight: 426,
         itemHeight: 70,
         itemfixed: false,
+        itemCount: 5;
       },
       init :function(){
         this.clone();
@@ -311,7 +310,7 @@
         //let index = $('.teacher-container').width() / $('.teacher-section-person-item').width();
         // console.log(index);
         // let zhi = null;
-        for (let i = 0; i < 4 ; i++) {
+        for (let i = 0; i < PAGE.data.itemCount-1 ; i++) {
            $($('.teacher-section-person-item')[i]).clone().appendTo('#teacher-item');
         }
         let item = $($('.teacher-section-person-item')[4]).clone();
@@ -407,6 +406,6 @@
       }
     }
     PAGE.init();
-  </script>
+  </script> -->
 </body>
 </html>
